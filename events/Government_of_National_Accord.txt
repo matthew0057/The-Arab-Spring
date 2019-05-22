@@ -1,0 +1,219 @@
+﻿### Government of National Accord Events ###
+
+add_namespace = nationalaccord
+
+### Battle for Tawergha GNA Informed of the success ###
+
+country_event = {
+	id = nationalaccord.1
+	title = nationalaccord.1.t
+	desc = nationalaccord.1.d
+	
+	picture = GFX_report_event_soviet_soldiers_tank
+	
+	is_triggered_only = yes
+
+	option = {
+		name = nationalaccord.1.a
+		
+		transfer_state = 45
+
+		add_war_support = 0.05
+
+		army_experience = 25
+	}
+}
+
+# Operation Just Cause succeeded - America gets opportunity to retaliate
+
+country_event = {
+	id = mexico.41
+	title = mexico.41.title
+	desc = mexico.41.desc
+	
+	picture = GFX_report_event_soviet_soldiers_tank
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mexico.41.a
+				
+		army_experience = 25
+
+		add_political_power = 100
+		
+		add_opinion_modifier = {
+			target = MEX
+			modifier = embargo
+		}
+		
+		MEX = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = embargo
+			}
+		}
+		
+		set_global_flag = flag_america_plans_to_punish_mexico_for_canal_attack
+
+		hidden_effect = {
+			news_event = {
+				id = mexico.44
+			}
+		}
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	option = {
+		name = mexico.41.b
+		
+		army_experience = 25
+
+		add_war_support = 0.05
+		
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = MEX
+		}
+		
+		add_opinion_modifier = {
+			target = MEX
+			modifier = embargo
+		}
+		
+		MEX = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = embargo
+			}
+		}
+		
+		set_global_flag = flag_america_ignores_mexican_attack_on_canal
+
+		hidden_effect = {
+			news_event = {
+				id = mexico.44
+			}
+		}
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+	}
+}
+
+### Battle for Tawergha GNA Informed of the failure ###
+
+country_event = {
+	id = nationalaccord.2
+	title = nationalaccord.2.t
+	desc = nationalaccord.2.d
+	
+	picture = GFX_report_event_soviet_soldiers_tank
+	
+	is_triggered_only = yes
+
+	option = {
+		name = nationalaccord.2.a
+		
+		add_war_support = -0.05
+
+		army_experience = 25
+	}
+}
+
+# Operation Just Cause failed - America gets opportunity to retaliate
+
+country_event = {
+	id = mexico.43
+	title = mexico.43.title
+	desc = mexico.43.desc
+	
+	picture = GFX_report_event_usa_macarthur_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mexico.43.a
+				
+		army_experience = 25
+		
+		add_opinion_modifier = {
+			target = MEX
+			modifier = embargo
+		}
+		
+		MEX = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = embargo
+			}
+		}
+		
+		set_global_flag = flag_america_plans_to_punish_mexico_for_canal_attack
+
+		hidden_effect = {
+			news_event = {
+				id = mexico.45
+			}
+		}
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	option = {
+		name = mexico.43.b
+		
+		army_experience = 25
+		
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = MEX
+		}
+		
+		add_opinion_modifier = {
+			target = MEX
+			modifier = embargo
+		}
+		
+		MEX = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = embargo
+			}
+		}
+		
+		set_global_flag = flag_america_ignores_mexican_attack_on_canal
+
+		hidden_effect = {
+			news_event = {
+				id = mexico.45
+			}
+		}
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+	}
+}

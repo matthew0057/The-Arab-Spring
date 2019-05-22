@@ -1,0 +1,13 @@
+l_english:
+ FSA_fascism:0 "Free Syrian Islamic Republic"
+ FSA_fascism_DEF:0 "Free Syrian Islamic Republic"
+ FSA_democratic:0 "Free Syria"
+ FSA_democratic_DEF:0 "Free Syria"
+ FSA_neutrality:1 "Free Syrian Army"
+ FSA_neutrality_DEF:1 "Free Syrian Army"
+ FSA_communism:0 "Free Syrian Socialist Republic"
+ FSA_communism_DEF:0 "Free Syrian Socialist Republic"
+ FSA_fascism_ADJ:0 "Free Syrian"
+ FSA_democratic_ADJ:0 "Free Syrian"
+ FSA_neutrality_ADJ:0 "Free Syrian"
+ FSA_communism_ADJ:0 "Free Syrian"

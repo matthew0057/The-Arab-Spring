@@ -1,0 +1,85 @@
+GNC_category_sirte_offenive = {
+	GNC_decision_battle_for_tawergha = { # Bahahaha
+	
+		icon = generic_nationalism
+		
+		visible = {
+			original_tag = GNC
+			LIS = {
+				owns_state = 45
+			}
+		}
+		
+		available = {
+			NOT = {
+				has_non_aggression_pact_with = LIS
+			}
+			NOT = {
+				has_war_with = LIS
+			}
+			NOT = {
+				is_in_faction_with = LIS
+			}
+			controls_state = 448
+			OR = {
+				owns_state = 448
+			}
+			LIS = {
+				owns_state = 45
+			}
+		}
+
+		cost = 25
+		
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = {
+					448 = {
+						is_owned_by = "LIS"
+						is_controlled_by = ROOT
+					}
+					ROOT = {
+						has_war_with = "LIS"
+					}
+				}
+				annex_country = { target = "LIS" }
+			}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 448
+					num_provinces = 1
+					on_win = nationalaccord.1
+					on_lose = nationalaccord.2
+					#on_cancel = 
+				}
+				
+				defender = {
+					state = 45
+					num_provinces = 1
+					#on_win = mexico.41
+					#on_lose = mexico.43
+					#on_cancel = 
+				}
+			}
+
+			#add_opinion_modifier = {
+			#	target = USA
+			#	modifier = mexico_attack_on_panama_canal
+			#}
+			
+			#USA = {
+			#	add_opinion_modifier = {
+			#		target = ROOT
+			#		modifier = mexico_attack_on_panama_canal
+			#	}
+			#}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,25 @@
+﻿l_english:
+### Algeria Descriptions ###
+POLITICS_ABDELAZIZ_BOUTEFLIKE_DESC:0 "Born on March 2nd, 1937 in the French Protectorate of Morocco. Bouteflike was born to a large family where he attanded 3 schools. When he turned 19 he joined the National Liberation Army where he fought in the Algerian war of independence. When Algeria became independent Bouteflika became president of the UN General Assembly. After president of the UNGA he spent six years abroad. When Algeria went into turmoil one again he was called up to be president, he refused. In the 1999 Algerian election he was elected with 74% of the vote. Bouteflika was elected again and again but in recent years he's turned unpopular and had a stroke in 2013."
+### Government of National Accord Descriptions ###
+POLITICS_FAYEZ_AL_SARRAJE_DESC:0 "Al Sarraje part of a wealthy family that was very powerful. Sarraje was elected as prime minister of the newly formed Government of National Accord witch has backing from the UN and as seen as the legitiment Governemnt of Libya."
+POLITICS_MOHAMED_GHNOUNO_DESC:0 "Mohamed Ghouno is the military spokesperson for the Government of National Accord."
+GNC_category_sirte_offenive:0 "Sirte Offensive"
+GNC_category_sirte_offenive_desc:0 "After our devestating loss of Sirte in 2015 planning for our revenge offensive is almost complete. And then we, the legitimate government can solidify our grasp on power."
+GNC_decision_battle_for_tawergha:0 "Battle for Tawergha"
+GNC_decision_battle_for_tawergha_desc:0 "Our first phaze of the offensive is to attack a small but crucial town of Tawergha witch was concidered a ghost town after the 2011 civil war. This shall begin the destruction and collapse of land controled by ISIS in Libya."
+nationalaccord.1.t:0 "Success at Tawergha"
+nationalaccord.1.d:0 "Today our troops have raised the Libyan flag over the barren but important town of Tawergha. Yesterday our troops stormed the front gates in an attempt to take over Tawergha. Some witnesses describe the battle as bloody but important for the destruction of the Islamic State in Libya. Casualties are still mounting but they did not die in vein. Now the road to Sirte lies open with little in the path to victory."
+nationalaccord.1.a:0 "Onwards to Sirte"
+nationalaccord.2.t:0 "Defeat at Tawergha"
+nationalaccord.2.d:0 "Islamic troops today repelled our invasion force. With VBIED's, IED's, and suicide bombers the Islamic State repelled our invasion force. Our high command is starting to doubt the tactics used by the Islamic State as hard to couter. Our command is starting to blame the failure on General Hafatr in the East for supporting the Islamic State with weapons."
+nationalaccord.2.a:0 "We'll be back"
+### Israel Descriptions ###
+POLITICS_BENJEMIN_NETANYAHU_DESC:0 "One of the most divisive figures in modern Israeli politics. Many people within Israeli and beyond seem to either support him or despise him. This is due to many of Netanyahu’s policies. Being an avid support of settling Palestinian territory, having an extreme anti-Iran stance, and a mixed foreign policy. Despite his shortcomings, Netanyahu leads one of the most powerful nations in the Middle East and he sees no signs of being voted out of office."
+### Tunisia Descriptions ###
+POLITICS_BENJI_CAID_ESSEBSI_DESC:0 "Essebsi has been the democratically elected President of Tunisia since 2014. While Tunisia remains a thriving democracy in a region engulfed by civil war, terrorism, and war; many have questioned his ability to run due to his old age. With the civil war in Libya growing worse and worse by the day, many are beginning to wonder if Essebsi can save Tunisian democracy."
+### Turkey Descriptions ###
+POLITICS_BAYEZID_OSMAN_DESC:0 "The Osman Imperial Dynasty ruled over the Ottoman Empire from 1299 until 1922 before Turkey became a Republic. But now in an unexpected turn of events, Bayezid Osman has restored the monarchy and brought back the Ottoman Empire. Now, Turkeyś neighbors look on in concern as Osman sets his ambitions to re-create the once-lost Ottoman Empire."
+POLITICS_RECEP_TAYYIP_ERDOGAN_DESC:0 "Previously serving as Prime Minister and recently elected President, Recep Tayyip Erdoğan has had a long career within Turkish politics. Many in the opposition have voiced their concerns about the new President, most notably, his attack on secularism which was implemented by Mustafa Kemal Atatürk in the founding of Turkey in the 1920s. Despite this, it seems Erdoğan and his right wing alliance will be able to hold onto power."
+### House of Representitives Descriptions ###
+POLITICS_KHALIFA_HAFTAR_DESC:0 "Ever since the late 1960s, Khalifa Haftar’s military genius has played a role in shaping the modern history of Libya. Haftar originally worked within the inner circle of Muammar Gaddafi before going on to become an adversary to the Gaddafi government. With the fall of the Gaddafi government in 2011, Haftar returned to Libya. Now, he is at the mantle of the Libyan National Army as he attempts to solidify his rule over a deeply fractured Libya. But can he do it?"

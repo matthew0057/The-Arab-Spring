@@ -1,0 +1,126 @@
+division_template = {
+	name = "ISIS Infantry Brigade"			# Infantry Division
+
+	division_names_group = LIS_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+### test division template ###
+division_template = {
+	name = "ISIS Militia"			# Infantry Division
+
+	division_names_group = LIS_INF_02
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "ISIS Motorized Battalion"				# Mountain Division
+
+	division_names_group = LIS_MOT_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+	}
+}
+
+
+units = {
+	##### Royal ISIS Army #####
+	division = {
+		#name = "1 Alfurqat"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1118
+		division_template = "ISIS Motorized Battalion"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+	}
+	division = {
+		#name = "2 Alfurqat"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 1041
+		division_template = "ISIS Militia"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		#name = "2 Alfurqat"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 4047
+		division_template = "ISIS Infantry Brigade"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+		division = {
+		#name = "2 Alfurqat"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 10117
+		division_template = "ISIS Militia"	
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.9
+	}
+	division = {
+		#name = "2 Alfurqat"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 1041
+		division_template = "ISIS Militia"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		#name = "2 Alfurqat"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 1041
+		division_template = "ISIS Motorized Battalion"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+}
+
+
+air_wings = {
+	### Royal ISIS Air Force (RIrAF)
+	291 = {
+		# 1st Squadron -- Hawker Audax
+		CAS_equipment_1 =  {
+			owner = "LIS" 
+			amount = 25
+		}
+	}
+}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "LIS"
+		}
+		requested_factories = 3
+		progress = 0.22
+		efficiency = 50
+	}
+}

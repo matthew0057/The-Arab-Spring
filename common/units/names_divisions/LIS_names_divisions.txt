@@ -1,0 +1,428 @@
+﻿# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical division names that did not have a number. Regardless if such names happened in history or not
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names. 
+#           Numbers must start from 1 and up. 
+#           Numbers can't repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either: 
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip
+#                                      where you choose the historical division name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
+#                                      the current game version.
+
+LIS_INF_01 = 
+{
+	name = "Infantry Divisions"
+
+	for_countries = { LIS }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LIS_GAR_01 }
+
+	fallback_name = "ISIS al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Infantry Brigade 'Sirte Garison'" }
+		2 = { "Infantry Brigade 'El Aghelia Figthters'" }
+		3 = { "ISIS al-Mushati al-%di" }
+		4 = { "ISIS al-Mushati al-%di" }
+		5 = { "ISIS al-Mushati al-%di" }
+		6 = { "ISIS al-Mushati al-%di" }
+		7 = { "ISIS al-Mushati al-%di" }
+		8 = { "ISIS al-Mushati al-%di" }
+		9 = { "ISIS al-Mushati al-%di" }
+		10 = { "ISIS al-Mushati al-%di" }
+		12 = { "ISIS al-Mushati al-%dr" }
+		13 = { "ISIS al-Mushati al-%dr" }
+		14 = { "ISIS al-Mushati al-%dr" }
+		15 = { "ISIS al-Mushati al-%dr" }
+		16 = { "ISIS al-Mushati al-%dr" }
+		17 = { "ISIS al-Mushati al-%dr" }
+		18 = { "ISIS al-Mushati al-%dr" }
+		19 = { "ISIS al-Mushati al-%dr" }
+		20 = { "ISIS al-Mushati al-%dr" }
+
+	}
+}
+### test division names ###
+LIS_INF_02 = 
+{
+	name = "Militias"
+
+	for_countries = { LIS }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LIS_GAR_01 }
+
+	fallback_name = "ISIS Militia %d"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Khoms Freedom Militia" }
+		2 = { "Misrata Fighters" }
+		3 = { "Abu Qurayn Freedom Fighters" }
+		4 = { "Sirte Militants" }
+		5 = { "ISIS Foreign Militia %d" }
+		6 = { "ISIS Foreign Militia %d" }
+		7 = { "ISIS Foreign Militia %d" }
+		8 = { "ISIS Foreign Militia %d" }
+		9 = { "ISIS Foreign Militia %d" }
+		10 = { "ISIS Foreign Militia %di" }
+		12 = { "ISIS Foreign Militia %dr" }
+		13 = { "ISIS Foreign Militia %dr" }
+		14 = { "ISIS Foreign Militia %dr" }
+		15 = { "ISIS Foreign Militia %dr" }
+		16 = { "ISIS Foreign Militia %dr" }
+		17 = { "ISIS Foreign Militia %dr" }
+		18 = { "ISIS Foreign Militia %dr" }
+		19 = { "ISIS Foreign Militia %dr" }
+		20 = { "ISIS Foreign Militia %dr" }
+
+	}
+}
+
+LIS_CAV_01 = 
+{
+	name = "Cavalry Divisions"
+
+	for_countries = { LIS }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { GER_Gar_01 }
+
+	fallback_name = "ISIS Sipahis al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "ISIS Sipahis al-%di" }
+		2 = { "ISIS Sipahis al-%di" }
+		3 = { "ISIS Sipahis al-%di" }
+		4 = { "ISIS Sipahis al-%di" }
+		5 = { "ISIS Sipahis al-%di" }
+		6 = { "ISIS Sipahis al-%di" }
+		7 = { "ISIS Sipahis al-%di" }
+		8 = { "ISIS Sipahis al-%di" }
+		9 = { "ISIS Sipahis al-%di" }
+		10 = { "ISIS Sipahis al-%di" }
+		11 = { "ISIS Sipahis al-%dr" }
+		12 = { "ISIS Sipahis al-%dr" }
+		13 = { "ISIS Sipahis al-%dr" }
+		14 = { "ISIS Sipahis al-%dr" }
+		15 = { "ISIS Sipahis al-%dr" }
+
+	}
+}
+
+LIS_MOT_01 = 
+{
+	name = "Motorised Divisions"
+
+	for_countries = { LIS }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LIS_INF_01 }
+
+	fallback_name = "ISIS al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "ISIS al-Mushati al-%di" }
+		2 = { "ISIS al-Mushati al-%di" }
+		3 = { "ISIS al-Mushati al-%di" }
+		4 = { "ISIS al-Mushati al-%di" }
+		5 = { "ISIS al-Mushati al-%di" }
+		6 = { "ISIS al-Mushati al-%di" }
+		7 = { "ISIS al-Mushati al-%di" }
+		8 = { "ISIS al-Mushati al-%di" }
+		9 = { "ISIS al-Mushati al-%di" }
+		10 = { "ISIS al-Mushati al-%di" }
+		12 = { "ISIS al-Mushati al-%dr" }
+		13 = { "ISIS al-Mushati al-%dr" }
+		14 = { "ISIS al-Mushati al-%dr" }
+		15 = { "ISIS al-Mushati al-%dr" }
+		16 = { "ISIS al-Mushati al-%dr" }
+		17 = { "ISIS al-Mushati al-%dr" }
+		18 = { "ISIS al-Mushati al-%dr" }
+		19 = { "ISIS al-Mushati al-%dr" }
+		20 = { "ISIS al-Mushati al-%dr" }
+
+	}
+}
+
+LIS_ARM_01 = 
+{
+	name = "Armoured Divisions"
+
+	for_countries = { LIS }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LIS_CAV_01 }
+
+	fallback_name = "ISIS Sipahis al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "ISIS Sipahis al-%di" }
+		2 = { "ISIS Sipahis al-%di" }
+		3 = { "ISIS Sipahis al-%di" }
+		4 = { "ISIS Sipahis al-%di" }
+		5 = { "ISIS Sipahis al-%di" }
+		6 = { "ISIS Sipahis al-%di" }
+		7 = { "ISIS Sipahis al-%di" }
+		8 = { "ISIS Sipahis al-%di" }
+		9 = { "ISIS Sipahis al-%di" }
+		10 = { "ISIS Sipahis al-%di" }
+		11 = { "ISIS Sipahis al-%dr" }
+		12 = { "ISIS Sipahis al-%dr" }
+		13 = { "ISIS Sipahis al-%dr" }
+		14 = { "ISIS Sipahis al-%dr" }
+		15 = { "ISIS Sipahis al-%dr" }
+
+	}
+}
+
+LIS_MEC_01 = 
+{
+	name = "Mechanised Divisions"
+
+	for_countries = { LIS }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized"  }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LIS_INF_01 }
+
+	fallback_name = "ISIS al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "ISIS al-Mushati al-%di" }
+		2 = { "ISIS al-Mushati al-%di" }
+		3 = { "ISIS al-Mushati al-%di" }
+		4 = { "ISIS al-Mushati al-%di" }
+		5 = { "ISIS al-Mushati al-%di" }
+		6 = { "ISIS al-Mushati al-%di" }
+		7 = { "ISIS al-Mushati al-%di" }
+		8 = { "ISIS al-Mushati al-%di" }
+		9 = { "ISIS al-Mushati al-%di" }
+		10 = { "ISIS al-Mushati al-%di" }
+		12 = { "ISIS al-Mushati al-%dr" }
+		13 = { "ISIS al-Mushati al-%dr" }
+		14 = { "ISIS al-Mushati al-%dr" }
+		15 = { "ISIS al-Mushati al-%dr" }
+		16 = { "ISIS al-Mushati al-%dr" }
+		17 = { "ISIS al-Mushati al-%dr" }
+		18 = { "ISIS al-Mushati al-%dr" }
+		19 = { "ISIS al-Mushati al-%dr" }
+		20 = { "ISIS al-Mushati al-%dr" }
+
+	}
+}
+
+LIS_GAR_01 = 
+{
+	name = "Garrison Divisions"
+
+	for_countries = { LIS }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LIS_INF_01 }
+
+	fallback_name = "ISIS al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "ISIS al-Mushati al-%di" }
+		2 = { "ISIS al-Mushati al-%di" }
+		3 = { "ISIS al-Mushati al-%di" }
+		4 = { "ISIS al-Mushati al-%di" }
+		5 = { "ISIS al-Mushati al-%di" }
+		6 = { "ISIS al-Mushati al-%di" }
+		7 = { "ISIS al-Mushati al-%di" }
+		8 = { "ISIS al-Mushati al-%di" }
+		9 = { "ISIS al-Mushati al-%di" }
+		10 = { "ISIS al-Mushati al-%di" }
+		12 = { "ISIS al-Mushati al-%dr" }
+		13 = { "ISIS al-Mushati al-%dr" }
+		14 = { "ISIS al-Mushati al-%dr" }
+		15 = { "ISIS al-Mushati al-%dr" }
+		16 = { "ISIS al-Mushati al-%dr" }
+		17 = { "ISIS al-Mushati al-%dr" }
+		18 = { "ISIS al-Mushati al-%dr" }
+		19 = { "ISIS al-Mushati al-%dr" }
+		20 = { "ISIS al-Mushati al-%dr" }
+
+	}
+}
+
+LIS_MAR_01 = 
+{
+	name = "Marine Divisions"
+
+	for_countries = { LIS }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LIS_INF_01 }
+
+	fallback_name = "ISIS al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		20 = { "ISIS al-Mushati al-%dr" }
+		21 = { "ISIS al-Mushati al-%dr" }
+		22 = { "ISIS al-Mushati al-%dr" }
+		23 = { "ISIS al-Mushati al-%dr" }
+		24 = { "ISIS al-Mushati al-%dr" }
+		25 = { "ISIS al-Mushati al-%dr" }
+		26 = { "ISIS al-Mushati al-%dr" }
+		27 = { "ISIS al-Mushati al-%dr" }
+		28 = { "ISIS al-Mushati al-%dr" }
+		29 = { "ISIS al-Mushati al-%dr" }
+		30 = { "ISIS al-Mushati al-%dr" }
+
+	}
+}
+
+LIS_MTN_01 = 
+{
+	name = "Mountain Divisions"
+
+	for_countries = { LIS }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LIS_INF_01 }
+
+	fallback_name = "ISIS al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "ISIS al-Mushati al-%di" }
+		2 = { "ISIS al-Mushati al-%di" }
+		3 = { "ISIS al-Mushati al-%di" }
+		4 = { "ISIS al-Mushati al-%di" }
+		5 = { "ISIS al-Mushati al-%di" }
+		6 = { "ISIS al-Mushati al-%di" }
+		7 = { "ISIS al-Mushati al-%di" }
+		8 = { "ISIS al-Mushati al-%di" }
+		9 = { "ISIS al-Mushati al-%di" }
+		10 = { "ISIS al-Mushati al-%di" }
+		12 = { "ISIS al-Mushati al-%dr" }
+		13 = { "ISIS al-Mushati al-%dr" }
+		14 = { "ISIS al-Mushati al-%dr" }
+		15 = { "ISIS al-Mushati al-%dr" }
+		16 = { "ISIS al-Mushati al-%dr" }
+		17 = { "ISIS al-Mushati al-%dr" }
+		18 = { "ISIS al-Mushati al-%dr" }
+		19 = { "ISIS al-Mushati al-%dr" }
+		20 = { "ISIS al-Mushati al-%dr" }
+
+	}
+}
+
+LIS_PAR_01 = 
+{
+	name = "Paratrooper Divisions"
+
+	for_countries = { LIS }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LIS_INF_01 }
+
+	fallback_name = "ISIS al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		20 = { "ISIS al-Mushati al-%dr" }
+		21 = { "ISIS al-Mushati al-%dr" }
+		22 = { "ISIS al-Mushati al-%dr" }
+		23 = { "ISIS al-Mushati al-%dr" }
+		24 = { "ISIS al-Mushati al-%dr" }
+		25 = { "ISIS al-Mushati al-%dr" }
+		26 = { "ISIS al-Mushati al-%dr" }
+		27 = { "ISIS al-Mushati al-%dr" }
+		28 = { "ISIS al-Mushati al-%dr" }
+		29 = { "ISIS al-Mushati al-%dr" }
+		30 = { "ISIS al-Mushati al-%dr" }
+
+	}
+}

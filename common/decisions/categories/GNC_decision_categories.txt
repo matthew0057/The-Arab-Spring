@@ -1,0 +1,10 @@
+GNC_category_sirte_offenive = {
+
+	#icon = eng_organize_the_blackshirts
+
+	picture = GFX_decision_cat_libya_sirte_offensive
+	
+	allowed = {
+		original_tag = GNC
+	}
+}
